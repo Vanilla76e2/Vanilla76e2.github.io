@@ -1,4 +1,6 @@
 [
+	{ "s": "LEARN", "p": [8] },
+	{ "s": "LESSON", "p": [8] },
 	{ "s": "LICENSE", "p": [29] },
 	{ "s": "LICENSES", "p": [29] }
 ]
