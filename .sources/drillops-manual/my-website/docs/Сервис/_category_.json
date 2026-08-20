@@ -1,0 +1,9 @@
+{
+  "label": "Сервис",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/servis",
+    "description": "Заготовки описаний и файловый архив внутри приложения."
+  }
+}

@@ -1,0 +1,49 @@
+# Деплой в репозиторий Vanilla76e2/Vanilla76e2.github.io
+# Положите этот файл в .github/workflows/ того репозитория.
+#
+# Структура репозитория:
+#   MigApp_Manual/           — уже опубликованное руководство
+#   DrillOps.Manual/         — сюда попадёт сборка (создаётся автоматически)
+#   drillops-manual/         — исходники (скопируйте сюда папку DrillOps.Manual)
+
+name: Deploy DrillOps Manual
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'drillops-manual/**'
+      - '.github/workflows/deploy-drillops-manual.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: drillops-manual/my-website/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: drillops-manual/my-website
+
+      - name: Build site
+        run: npm run build
+        working-directory: drillops-manual/my-website
+
+      - name: Deploy to DrillOps.Manual/
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: main
+          publish_dir: drillops-manual/my-website/build
+          destination_dir: DrillOps.Manual
+          keep_files: true

@@ -1,0 +1,11 @@
+# Исходники и сборка DrillOps
+.sources/drillops-manual/my-website/node_modules/
+.sources/drillops-manual/my-website/build/
+.sources/drillops-manual/my-website/.docusaurus/
+.sources/drillops-manual/my-website/.cache-loader/
+.sources/drillops-manual/my-website/.obsidian/
+
+# Системное
+.DS_Store
+Thumbs.db
+*.log

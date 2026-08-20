@@ -1,0 +1,12 @@
+{
+  "name": "drillops-manual",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix my-website start",
+    "build": "npm --prefix my-website build",
+    "serve": "npm --prefix my-website serve",
+    "deploy": "npm --prefix my-website deploy",
+    "clear": "npm --prefix my-website clear",
+    "typecheck": "npm --prefix my-website typecheck"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "label": "Справочники",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/spravochniki",
+    "description": "То, что заводят до рейса: заказчики, локации, компоненты, сборки и шаблоны."
+  }
+}

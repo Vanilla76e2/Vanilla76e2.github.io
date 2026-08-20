@@ -1,0 +1,21 @@
+.features {
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem 0 3rem;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 72px;
+  width: 72px;
+  margin-bottom: 0.75rem;
+}
+
+[data-theme='dark'] .featureSvg :is(path, circle, rect) {
+  stroke: #93c5fd;
+}
+
+[data-theme='dark'] .featureSvg circle[fill] {
+  fill: #60a5fa;
+  stroke: none;
+}

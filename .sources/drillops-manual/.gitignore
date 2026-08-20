@@ -1,0 +1,9 @@
+node_modules/
+my-website/node_modules/
+my-website/build/
+my-website/.docusaurus/
+my-website/.cache-loader/
+my-website/.obsidian/
+
+.DS_Store
+*.log

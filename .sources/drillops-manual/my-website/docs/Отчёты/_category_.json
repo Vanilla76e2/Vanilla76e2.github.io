@@ -1,0 +1,9 @@
+{
+  "label": "Отчёты",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/otchety",
+    "description": "Сводка по серийному номеру и аналитика по парку."
+  }
+}

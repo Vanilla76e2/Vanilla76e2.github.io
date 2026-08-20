@@ -1,0 +1,162 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  --hero-paper: #f4f7fc;
+
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: min(78vh, 760px);
+  margin: 0;
+  padding: 5.5rem 1.25rem 4.5rem;
+  text-align: center;
+  overflow: hidden;
+  background: var(--hero-paper);
+}
+
+.heroBanner::before,
+.heroBanner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.heroBanner::before {
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 42%, #ffffff 0%, rgba(255, 255, 255, 0.72) 34%, transparent 68%),
+    radial-gradient(ellipse 42% 38% at 8% 18%, rgba(37, 99, 235, 0.28), transparent 62%),
+    radial-gradient(ellipse 38% 42% at 94% 78%, rgba(30, 58, 95, 0.18), transparent 60%),
+    radial-gradient(ellipse 36% 30% at 86% 12%, rgba(96, 165, 250, 0.35), transparent 58%),
+    radial-gradient(ellipse 30% 28% at 14% 86%, rgba(59, 130, 246, 0.18), transparent 55%),
+    linear-gradient(180deg, #d7e4f6 0%, #eef3fb 48%, var(--hero-paper) 100%);
+}
+
+.heroBanner::after {
+  z-index: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(30, 58, 95, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 58, 95, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 75% 60% at 50% 45%, transparent 20%, #000 100%);
+}
+
+.heroBanner > * {
+  position: relative;
+  z-index: 1;
+}
+
+:global([data-theme='dark']) .heroBanner {
+  --hero-paper: #0b1220;
+}
+
+:global([data-theme='dark']) .heroBanner::before {
+  background:
+    radial-gradient(ellipse 70% 52% at 50% 42%, rgba(37, 99, 235, 0.2) 0%, transparent 64%),
+    radial-gradient(ellipse 46% 40% at 6% 16%, rgba(37, 99, 235, 0.32), transparent 62%),
+    radial-gradient(ellipse 42% 46% at 96% 82%, rgba(29, 78, 216, 0.2), transparent 58%),
+    radial-gradient(ellipse 34% 28% at 88% 10%, rgba(96, 165, 250, 0.18), transparent 55%),
+    linear-gradient(180deg, #070d18 0%, #0b1220 55%, var(--ifm-background-color) 100%);
+}
+
+:global([data-theme='dark']) .heroBanner::after {
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(147, 197, 253, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 197, 253, 0.12) 1px, transparent 1px);
+}
+
+.heroLogoWrap {
+  position: relative;
+  display: inline-block;
+  width: min(720px, 100%);
+  max-width: 720px;
+  margin: 0 auto 1.1rem;
+}
+
+.heroLogo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.heroLogoGlow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  user-select: none;
+  filter: blur(4px) saturate(1.8);
+  opacity: 0.3;
+}
+
+:global([data-theme='dark']) .heroLogoGlow {
+  mix-blend-mode: screen;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    min-height: auto;
+    padding: 3.25rem 1.25rem 2.75rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  box-shadow: 0 0 24px rgba(37, 99, 235, 0.22);
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    color 0.15s ease;
+}
+
+.ctaButton:hover,
+.ctaButton:focus-visible {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 28px rgba(79, 70, 229, 0.28);
+}
+
+.ctaButton:active {
+  background: #4338ca;
+  border-color: #4338ca;
+  color: #fff;
+}
+
+.ctaButtonIcon {
+  flex-shrink: 0;
+}
