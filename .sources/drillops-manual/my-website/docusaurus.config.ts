@@ -34,7 +34,23 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
         },
-        blog: false,
+        blog: {
+          showReadingTime: false,
+          blogTitle: 'История версий',
+          blogDescription: 'Что нового в DrillOps Desktop',
+          blogSidebarTitle: 'Версии',
+          blogSidebarCount: 'ALL',
+          postsPerPage: 'ALL',
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+            title: 'DrillOps — история версий',
+            description: 'Патчноуты DrillOps Desktop',
+            language: 'ru',
+          },
+          onInlineTags: 'warn',
+          onInlineAuthors: 'ignore',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -50,6 +66,7 @@ const config: Config = {
         language: ['ru', 'en'],
         highlightSearchTermsOnTargetPage: true,
         searchResultLimits: 8,
+        indexBlog: true,
       },
     ],
   ],
@@ -75,6 +92,11 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Руководство',
+        },
+        {
+          to: '/blog',
+          label: 'История версий',
+          position: 'left',
         },
         {
           href: 'https://github.com/Vanilla76e2/DrillOps.Releases/releases',
