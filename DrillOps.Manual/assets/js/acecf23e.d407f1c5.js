@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([["3220"],{1912(s){s.exports=JSON.parse('{"blogBasePath":"/DrillOps.Manual/blog","blogTitle":"\u0418\u0441\u0442\u043E\u0440\u0438\u044F \u0432\u0435\u0440\u0441\u0438\u0439","authorsListPath":"/DrillOps.Manual/blog/authors"}')}}]);

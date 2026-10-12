@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([["1397"],{6e3(e){e.exports=JSON.parse('{"tags":[{"label":"\u0420\u0435\u043B\u0438\u0437","permalink":"/DrillOps.Manual/blog/tags/reliz","description":"\u041F\u0430\u0442\u0447\u043D\u043E\u0443\u0442\u044B DrillOps Desktop","count":17}]}')}}]);

@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>DrillOps — история версий</title>
+        <link>https://vanilla76e2.github.io/DrillOps.Manual/blog</link>
+        <description>Патчноуты DrillOps Desktop</description>
+        <lastBuildDate>Mon, 12 Oct 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>ru</language>
+        <item>
+            <title><![CDATA[DrillOps Desktop 0.10.0-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/2026/10/12/0.10.0-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/2026/10/12/0.10.0-beta</guid>
+            <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Рейсы, плановые отправки, списание компонента и лента времени.]]></description>
+            <content:encoded><![CDATA[<p><strong>Рейсы, плановые отправки, списание компонента и лента времени.</strong></p>
+<blockquote>
+<p>⚠️ Обновляйте <strong>Desktop и API вместе</strong> до <code>0.10.0-beta</code>.<br>
+<strong>Contract v10</strong> — вход на старый сервер будет заблокирован.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="новое">Новое<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/2026/10/12/0.10.0-beta#%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5" class="hash-link" aria-label="Прямая ссылка на Новое" title="Прямая ссылка на Новое" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="отправки">Отправки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/2026/10/12/0.10.0-beta#%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Отправки" title="Прямая ссылка на Отправки" translate="no">​</a></h3>
+<ul>
+<li class="">Мастер отправки: сборки, место и дата; отправить сразу или запланировать</li>
+<li class="">Запланированная отправка не занимает сборку в поле, пока её не отправят</li>
+<li class="">В одну отправку можно добавить дополнительные сборки помимо основной</li>
+<li class="">Запланированную отправку можно отменить: запись остаётся в списке со статусом «Отменено» и не занимает сборку</li>
+<li class="">Запланированные отправки остаются в одной группе, только если совпадают заказчик, куст и скважина; уже отправленные держатся вместе по дате и месту</li>
+<li class="">В списке виден номер отправки из шести цифр</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="рейсы">Рейсы<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/2026/10/12/0.10.0-beta#%D1%80%D0%B5%D0%B9%D1%81%D1%8B" class="hash-link" aria-label="Прямая ссылка на Рейсы" title="Прямая ссылка на Рейсы" translate="no">​</a></h3>
+<ul>
+<li class="">Отдельный раздел «Рейсы»: состав КНБК, фильтры, номер рейса и история правок</li>
+<li class="">Рейс — самостоятельная запись, а не отчёт внутри документа полевых данных</li>
+<li class="">Рейс привязывается к отправке; даты спуска и подъёма должны целиком лежать в окне отправки каждого инструмента</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="обслуживание">Обслуживание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/2026/10/12/0.10.0-beta#%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="hash-link" aria-label="Прямая ссылка на Обслуживание" title="Прямая ссылка на Обслуживание" translate="no">​</a></h3>
+<ul>
+<li class="">Компонент сборки можно списать отдельно: он снимается со сборки, материал помечается списанным</li>
+<li class="">В заказ-наряде компонента видны последнее извлечение и установка, со ссылкой на заказ-наряд, где это сделано</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="аналитика">Аналитика<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/2026/10/12/0.10.0-beta#%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Аналитика" title="Прямая ссылка на Аналитика" translate="no">​</a></h3>
+<ul>
+<li class="">Лента времени: нахождение в поле, рейсы и обслуживание; из полосы открываются отправка, рейс или обслуживание</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="текстовые-шаблоны">Текстовые шаблоны<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/2026/10/12/0.10.0-beta#%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B" class="hash-link" aria-label="Прямая ссылка на Текстовые шаблоны" title="Прямая ссылка на Текстовые шаблоны" translate="no">​</a></h3>
+<ul>
+<li class="">У шаблона сразу причина и описание; он действует на выбранные типы операций</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="исправления">Исправления<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/2026/10/12/0.10.0-beta#%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Исправления" title="Прямая ссылка на Исправления" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="обслуживание-1">Обслуживание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/2026/10/12/0.10.0-beta#%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-1" class="hash-link" aria-label="Прямая ссылка на Обслуживание" title="Прямая ссылка на Обслуживание" translate="no">​</a></h3>
+<ul>
+<li class="">Полевые данные компонента берутся из отправки, где он стоял на инструменте</li>
+<li class="">Более поздняя отправка и запланированная, если инструмент не уезжал, в обслуживание не подставляются</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="списки">Списки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/2026/10/12/0.10.0-beta#%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Списки" title="Прямая ссылка на Списки" translate="no">​</a></h3>
+<ul>
+<li class="">При переключении вкладок список не сбрасывается в начало</li>
+</ul>
+<hr>
+<p><em>DrillOps Desktop 0.10.0-beta · Contract v10 · Октябрь 2026</em></p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[0.9.0-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-9-0-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-9-0-beta</guid>
+            <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Мастер первичной сборки, заказ-наряд без сборки, журнал без «битого» лога.]]></description>
+            <content:encoded><![CDATA[<p><strong>Мастер первичной сборки, заказ-наряд без сборки, журнал без «битого» лога.</strong></p>
+<!-- -->
+<blockquote>
+<p>⚠️ Обновляйте <strong>Desktop и API вместе</strong> до <code>0.9.0-beta</code>.<br>
+<strong>Contract v9</strong> — вход на старый сервер будет заблокирован.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="новое">Новое<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-9-0-beta#%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5" class="hash-link" aria-label="Прямая ссылка на Новое" title="Прямая ссылка на Новое" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сборки">Сборки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-9-0-beta#%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Сборки" title="Прямая ссылка на Сборки" translate="no">​</a></h3>
+<ul>
+<li class="">В карточке пустой сборки — «Мастер создания»: дата, исполнитель, слоты шаблона</li>
+<li class="">В слот можно поставить существующий материал или завести новый с серийным номером</li>
+<li class="">Мастер ставит компоненты (в том числе вложенные) и заводит связанные полевые данные, обслуживание и заказ-наряды</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="заказ-наряд-и-операции">Заказ-наряд и операции<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-9-0-beta#%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7-%D0%BD%D0%B0%D1%80%D1%8F%D0%B4-%D0%B8-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8" class="hash-link" aria-label="Прямая ссылка на Заказ-наряд и операции" title="Прямая ссылка на Заказ-наряд и операции" translate="no">​</a></h3>
+<ul>
+<li class="">Если у ЗН ещё нет сборки, операция подставляет её с материала или заводит по шаблону</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="исправления">Исправления<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-9-0-beta#%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Исправления" title="Прямая ссылка на Исправления" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="журнал">Журнал<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-9-0-beta#%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB" class="hash-link" aria-label="Прямая ссылка на Журнал" title="Прямая ссылка на Журнал" translate="no">​</a></h3>
+<ul>
+<li class="">Запись в лог больше не оставляет в файле нулевые байты, если его параллельно открыли другой программой</li>
+</ul>
+<hr>
+<p><em>DrillOps Desktop 0.9.0-beta · Contract v9 · Сентябрь 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.8.0-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-8-0-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-8-0-beta</guid>
+            <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Смена пароля по требованию, серийник сборки с головы, даты ЗН и операций.]]></description>
+            <content:encoded><![CDATA[<p><strong>Смена пароля по требованию, серийник сборки с головы, даты ЗН и операций.</strong></p>
+<!-- -->
+<blockquote>
+<p>⚠️ Обновляйте <strong>Desktop и API вместе</strong> до <code>0.8.0-beta</code>.<br>
+<strong>Contract v8</strong> — вход на старый сервер будет заблокирован.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="новое">Новое<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-8-0-beta#%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5" class="hash-link" aria-label="Прямая ссылка на Новое" title="Прямая ссылка на Новое" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="вход">Вход<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-8-0-beta#%D0%B2%D1%85%D0%BE%D0%B4" class="hash-link" aria-label="Прямая ссылка на Вход" title="Прямая ссылка на Вход" translate="no">​</a></h3>
+<ul>
+<li class="">Теперь для смены пароля нужно ввести старый, после чего можно задать новый</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="обслуживание">Обслуживание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-8-0-beta#%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="hash-link" aria-label="Прямая ссылка на Обслуживание" title="Прямая ссылка на Обслуживание" translate="no">​</a></h3>
+<ul>
+<li class="">Запись обслуживания на компонент с шаблоном сборки создаёт саму сборку если её ещё не было</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="интерфейс">Интерфейс<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-8-0-beta#%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81" class="hash-link" aria-label="Прямая ссылка на Интерфейс" title="Прямая ссылка на Интерфейс" translate="no">​</a></h3>
+<ul>
+<li class="">После обновления открывается «Что нового» с патчноутом этой версии</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="исправления">Исправления<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-8-0-beta#%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Исправления" title="Прямая ссылка на Исправления" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сборки">Сборки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-8-0-beta#%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Сборки" title="Прямая ссылка на Сборки" translate="no">​</a></h3>
+<ul>
+<li class="">Серийный номер сборки всегда как у головного компонента</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="заказ-наряд-и-операции">Заказ-наряд и операции<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-8-0-beta#%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7-%D0%BD%D0%B0%D1%80%D1%8F%D0%B4-%D0%B8-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8" class="hash-link" aria-label="Прямая ссылка на Заказ-наряд и операции" title="Прямая ссылка на Заказ-наряд и операции" translate="no">​</a></h3>
+<ul>
+<li class="">Дата окончания ЗН не раньше последней операции</li>
+<li class="">Без прав администратора даты операции и окончания ЗН не позже сегодня</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="операции">Операции<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-8-0-beta#%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8" class="hash-link" aria-label="Прямая ссылка на Операции" title="Прямая ссылка на Операции" translate="no">​</a></h3>
+<ul>
+<li class="">При извлечении любого объекта видно «нужно обслуживание»</li>
+</ul>
+<hr>
+<p><em>DrillOps Desktop 0.8.0-beta · Contract v8 · Сентябрь 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.7.2-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta</guid>
+            <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Патч Desktop: метры в аналитике, фильтры отправок, сводка и наработка, каскад обслуживания.]]></description>
+            <content:encoded><![CDATA[<p><strong>Патч Desktop: метры в аналитике, фильтры отправок, сводка и наработка, каскад обслуживания.</strong></p>
+<!-- -->
+<blockquote>
+<p>✅ Contract v7 — обновление API не требуется.<br>
+<!-- -->Совместимо с API 0.7.1-beta</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="новое">Новое<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta#%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5" class="hash-link" aria-label="Прямая ссылка на Новое" title="Прямая ссылка на Новое" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="аналитика">Аналитика<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta#%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Аналитика" title="Прямая ссылка на Аналитика" translate="no">​</a></h3>
+<ul>
+<li class="">Карточка «Метров пробурено» за выбранный период, с разбивкой по типу и серийному номеру</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="отправки">Отправки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta#%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Отправки" title="Прямая ссылка на Отправки" translate="no">​</a></h3>
+<ul>
+<li class="">Список фильтруется по типу оборудования, локации и заказчику</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="полевые-данные">Полевые данные<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5" class="hash-link" aria-label="Прямая ссылка на Полевые данные" title="Прямая ссылка на Полевые данные" translate="no">​</a></h3>
+<ul>
+<li class="">В диалоге импорта отчёта ПД можно найти поиском, а не только выбрать из списка</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="компоненты">Компоненты<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta#%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D1%8B" class="hash-link" aria-label="Прямая ссылка на Компоненты" title="Прямая ссылка на Компоненты" translate="no">​</a></h3>
+<ul>
+<li class="">Комментарий виден в списке и участвует в поиске</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="исправления">Исправления<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta#%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Исправления" title="Прямая ссылка на Исправления" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сводка">Сводка<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta#%D1%81%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Сводка" title="Прямая ссылка на Сводка" translate="no">​</a></h3>
+<ul>
+<li class="">Рейс и полевые данные прошлого цикла не попадают в более позднее обслуживание другой сборки</li>
+<li class="">Часы в шапке считаются по той же логике, что периоды на шкале</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="наработка">Наработка<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta#%D0%BD%D0%B0%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Наработка" title="Прямая ссылка на Наработка" translate="no">​</a></h3>
+<ul>
+<li class="">Часы из отчётов ПД не садятся на период «готово» без полевых данных</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="обслуживание">Обслуживание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta#%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="hash-link" aria-label="Прямая ссылка на Обслуживание" title="Прямая ссылка на Обслуживание" translate="no">​</a></h3>
+<ul>
+<li class="">Удаление записи обслуживания уносит связанные заказ-наряд и полевые данные в корзину</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="заказ-наряд-и-полевые-данные">Заказ-наряд и полевые данные<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-2-beta#%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7-%D0%BD%D0%B0%D1%80%D1%8F%D0%B4-%D0%B8-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5" class="hash-link" aria-label="Прямая ссылка на Заказ-наряд и полевые данные" title="Прямая ссылка на Заказ-наряд и полевые данные" translate="no">​</a></h3>
+<ul>
+<li class="">Кнопки «предыдущий / следующий» пропускают документы без живой записи обслуживания</li>
+</ul>
+<hr>
+<p><em>DrillOps Desktop 0.7.2-beta · Contract v7 · Сентябрь 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.7.1-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-1-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-1-beta</guid>
+            <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Хотфикс Desktop: сводка и наработка, привязка ПД к рейсу, фильтр заготовок.]]></description>
+            <content:encoded><![CDATA[<p><strong>Хотфикс Desktop: сводка и наработка, привязка ПД к рейсу, фильтр заготовок.</strong></p>
+<!-- -->
+<blockquote>
+<p>✅ Contract v7 — обновление API не требуется.
+Совместимо с API 0.7.0-beta</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="новое">Новое<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-1-beta#%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5" class="hash-link" aria-label="Прямая ссылка на Новое" title="Прямая ссылка на Новое" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сводка">Сводка<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-1-beta#%D1%81%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Сводка" title="Прямая ссылка на Сводка" translate="no">​</a></h3>
+<ul>
+<li class="">У рейса отдельная строка с деталями</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="обслуживание">Обслуживание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-1-beta#%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="hash-link" aria-label="Прямая ссылка на Обслуживание" title="Прямая ссылка на Обслуживание" translate="no">​</a></h3>
+<ul>
+<li class="">В строке полевых данных видны дата и часы наработки</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="заготовки">Заготовки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-1-beta#%D0%B7%D0%B0%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Заготовки" title="Прямая ссылка на Заготовки" translate="no">​</a></h3>
+<ul>
+<li class="">Список можно отфильтровать по типу; экспорт сохраняет все заготовки, не только видимые</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="исправления">Исправления<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-1-beta#%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Исправления" title="Прямая ссылка на Исправления" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сводка-1">Сводка<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-1-beta#%D1%81%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0-1" class="hash-link" aria-label="Прямая ссылка на Сводка" title="Прямая ссылка на Сводка" translate="no">​</a></h3>
+<ul>
+<li class="">Часы периода считаются по отчётам ПД, даже если дата записи не попадает в интервал; одна и та же наработка не дублируется между периодами</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="полевые-данные">Полевые данные<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-1-beta#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5" class="hash-link" aria-label="Прямая ссылка на Полевые данные" title="Прямая ссылка на Полевые данные" translate="no">​</a></h3>
+<ul>
+<li class="">Рейс подбирается по датам спуска и подъёма в отчётах, а не по дате карточки ПД</li>
+</ul>
+<p><em>DrillOps Desktop 0.7.1-beta · Contract v7 · Сентябрь 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.7.0-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta</guid>
+            <pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Заказ-наряды на компоненты, наработка в часах, связь ПД с рейсом.]]></description>
+            <content:encoded><![CDATA[<p><strong>Заказ-наряды на компоненты, наработка в часах, связь ПД с рейсом.</strong></p>
+<!-- -->
+<blockquote>
+<p>⚠️ Обновляйте <strong>Desktop и API вместе</strong> до <code>0.7.0-beta</code>.<br>
+<strong>Contract v7</strong> — вход на старый сервер будет заблокирован.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="новое">Новое<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5" class="hash-link" aria-label="Прямая ссылка на Новое" title="Прямая ссылка на Новое" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="заказ-наряд-и-обслуживание">Заказ-наряд и обслуживание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7-%D0%BD%D0%B0%D1%80%D1%8F%D0%B4-%D0%B8-%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="hash-link" aria-label="Прямая ссылка на Заказ-наряд и обслуживание" title="Прямая ссылка на Заказ-наряд и обслуживание" translate="no">​</a></h3>
+<ul>
+<li class="">ЗН и запись обслуживания можно завести на отдельный компонент, не только на сборку</li>
+<li class="">При извлечении компонент может уйти в ожидание обслуживания</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="наработка">Наработка<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D0%BD%D0%B0%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Наработка" title="Прямая ссылка на Наработка" translate="no">​</a></h3>
+<ul>
+<li class="">Циркуляционное время и наработка в часах с сотыми, а не в минутах</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="заготовки">Заготовки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D0%B7%D0%B0%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Заготовки" title="Прямая ссылка на Заготовки" translate="no">​</a></h3>
+<ul>
+<li class="">Типы: описание и причина; причину можно подставить в мастере операции</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="полевые-данные">Полевые данные<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5" class="hash-link" aria-label="Прямая ссылка на Полевые данные" title="Прямая ссылка на Полевые данные" translate="no">​</a></h3>
+<ul>
+<li class="">ПД привязывается к рейсу; из карточки рейса и сводки можно открыть связанные полевые данные</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="главная">Главная<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F" class="hash-link" aria-label="Прямая ссылка на Главная" title="Прямая ссылка на Главная" translate="no">​</a></h3>
+<ul>
+<li class="">Фильтр колонки «В поле» по заказчику; типы сборок выбираются несколькими галочками</li>
+<li class="">В колонке «Готово» дата последнего закрытого ЗН; из дерева можно открыть сводку</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сводка">Сводка<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D1%81%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Сводка" title="Прямая ссылка на Сводка" translate="no">​</a></h3>
+<ul>
+<li class="">У периода видны часы за интервал и накопленная наработка</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="интерфейс">Интерфейс<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81" class="hash-link" aria-label="Прямая ссылка на Интерфейс" title="Прямая ссылка на Интерфейс" translate="no">​</a></h3>
+<ul>
+<li class="">Копирование текста у подписей; в описании операции Ctrl+W отмечает предупреждение</li>
+<li class="">Из строки наработки в карточке материала открывается исходный ПД</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="исправления">Исправления<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Исправления" title="Прямая ссылка на Исправления" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="операции">Операции<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8" class="hash-link" aria-label="Прямая ссылка на Операции" title="Прямая ссылка на Операции" translate="no">​</a></h3>
+<ul>
+<li class="">Дата операции не может быть раньше даты начала заказ-наряда</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="материалы">Материалы<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B" class="hash-link" aria-label="Прямая ссылка на Материалы" title="Прямая ссылка на Материалы" translate="no">​</a></h3>
+<ul>
+<li class="">Комментарий в карточке материала сохраняется пустым</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сессия">Сессия<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-7-0-beta#%D1%81%D0%B5%D1%81%D1%81%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Сессия" title="Прямая ссылка на Сессия" translate="no">​</a></h3>
+<ul>
+<li class="">Таймер сессии совпадает с часами сервера, если время компьютера отличается</li>
+</ul>
+<hr>
+<p><em>DrillOps Desktop 0.7.0-beta · Contract v7 · Сентябрь 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.6.0-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-6-0-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-6-0-beta</guid>
+            <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Расчёт наработки, полевые данные, копирование текста.]]></description>
+            <content:encoded><![CDATA[<p><strong>Расчёт наработки, полевые данные, копирование текста.</strong></p>
+<!-- -->
+<blockquote>
+<p>⚠️ Обновляйте <strong>Desktop и API вместе</strong> до <code>0.6.0-beta</code>.<br>
+<strong>Contract v6</strong> — вход на старый сервер будет заблокирован.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="новое">Новое<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-6-0-beta#%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5" class="hash-link" aria-label="Прямая ссылка на Новое" title="Прямая ссылка на Новое" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="наработка-компонента">Наработка компонента<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-6-0-beta#%D0%BD%D0%B0%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%B0" class="hash-link" aria-label="Прямая ссылка на Наработка компонента" title="Прямая ссылка на Наработка компонента" translate="no">​</a></h3>
+<ul>
+<li class="">Часы закрытых ПД приходят с сервера как рассчитанные рейсовые строки</li>
+<li class="">Рейсовые строки в карточке материала только для чтения; вручную по-прежнему можно добавить свои часы</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="полевые-данные">Полевые данные<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-6-0-beta#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5" class="hash-link" aria-label="Прямая ссылка на Полевые данные" title="Прямая ссылка на Полевые данные" translate="no">​</a></h3>
+<ul>
+<li class="">«Добавить рейс» доступна при праве записи, без лишних условий по справочникам</li>
+<li class="">Новый ПД с главной и обслуживания сразу открывается с формой нового рейса</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="интерфейс">Интерфейс<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-6-0-beta#%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81" class="hash-link" aria-label="Прямая ссылка на Интерфейс" title="Прямая ссылка на Интерфейс" translate="no">​</a></h3>
+<ul>
+<li class="">У текстовых полей контекстное меню <strong>Копировать</strong></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="исправления">Исправления<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-6-0-beta#%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Исправления" title="Прямая ссылка на Исправления" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="полевые-данные-1">Полевые данные<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-6-0-beta#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-1" class="hash-link" aria-label="Прямая ссылка на Полевые данные" title="Прямая ссылка на Полевые данные" translate="no">​</a></h3>
+<ul>
+<li class="">Первое сохранение закрывает ПД</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="заказ-наряд">Заказ-наряд<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-6-0-beta#%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7-%D0%BD%D0%B0%D1%80%D1%8F%D0%B4" class="hash-link" aria-label="Прямая ссылка на Заказ-наряд" title="Прямая ссылка на Заказ-наряд" translate="no">​</a></h3>
+<ul>
+<li class="">В наработку на начало ЗН входят часы за дату старта, а не только строго до неё</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="обслуживание">Обслуживание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-6-0-beta#%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="hash-link" aria-label="Прямая ссылка на Обслуживание" title="Прямая ссылка на Обслуживание" translate="no">​</a></h3>
+<ul>
+<li class="">Активные записи без заказ-наряда стоят сверху списка</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="локации">Локации<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-6-0-beta#%D0%BB%D0%BE%D0%BA%D0%B0%D1%86%D0%B8%D0%B8" class="hash-link" aria-label="Прямая ссылка на Локации" title="Прямая ссылка на Локации" translate="no">​</a></h3>
+<ul>
+<li class="">После сохранения и удаления список и карточка обновляются из кэша, выбор не сбрасывается</li>
+</ul>
+<hr>
+<p><em>DrillOps Desktop 0.6.0-beta · Contract v6 · Сентябрь 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.5.3-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-3-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-3-beta</guid>
+            <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Патч Desktop: принудительное обновление данных, серийник сборки из материала, сортировка списков.]]></description>
+            <content:encoded><![CDATA[<p><strong>Патч Desktop: принудительное обновление данных, серийник сборки из материала, сортировка списков.</strong></p>
+<!-- -->
+<blockquote>
+<p>✅ Contract v5 — обновление API не требуется.<br>
+<!-- -->Совместимо с API 0.5.2-beta</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="новое">Новое<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-3-beta#%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5" class="hash-link" aria-label="Прямая ссылка на Новое" title="Прямая ссылка на Новое" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="обновление-данных">Обновление данных<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-3-beta#%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" class="hash-link" aria-label="Прямая ссылка на Обновление данных" title="Прямая ссылка на Обновление данных" translate="no">​</a></h3>
+<ul>
+<li class="">В шапке кнопка <strong>Обновить данные</strong> и хоткей <strong>F5</strong> заново загружают кэш с сервера</li>
+<li class="">Открытые карточки в режиме просмотра перечитываются; в режиме редактирования черновики не сбрасываются — обновляются только списки ComboBox и AutoCompleteBox</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сводка">Сводка<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-3-beta#%D1%81%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Сводка" title="Прямая ссылка на Сводка" translate="no">​</a></h3>
+<ul>
+<li class="">В колонках показывается серийный номер материала сборки</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="исправления">Исправления<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-3-beta#%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Исправления" title="Прямая ссылка на Исправления" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="отправки-и-обслуживание">Отправки и обслуживание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-3-beta#%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8-%D0%B8-%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="hash-link" aria-label="Прямая ссылка на Отправки и обслуживание" title="Прямая ссылка на Отправки и обслуживание" translate="no">​</a></h3>
+<ul>
+<li class="">Незавершённые записи сверху, затем по дате (новые выше)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="даты">Даты<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-3-beta#%D0%B4%D0%B0%D1%82%D1%8B" class="hash-link" aria-label="Прямая ссылка на Даты" title="Прямая ссылка на Даты" translate="no">​</a></h3>
+<ul>
+<li class="">Набранная в календаре дата сохраняется по кнопке Сохранить, даже если поле не теряло фокус</li>
+</ul>
+<hr>
+<p><em>DrillOps Desktop 0.5.3-beta · Contract v5 · Сентябрь 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.5.2-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-2-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-2-beta</guid>
+            <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Патч Desktop: предупреждения в описании, наработка, актуальный компонент в операциях.]]></description>
+            <content:encoded><![CDATA[<p><strong>Патч Desktop: предупреждения в описании, наработка, актуальный компонент в операциях.</strong></p>
+<!-- -->
+<blockquote>
+<p>✅ Contract v5 — обновление API не требуется.<br>
+<!-- -->Совместимо с API 0.5.1-beta</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="новое">Новое<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-2-beta#%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5" class="hash-link" aria-label="Прямая ссылка на Новое" title="Прямая ссылка на Новое" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="описание-операции">Описание операции<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-2-beta#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8" class="hash-link" aria-label="Прямая ссылка на Описание операции" title="Прямая ссылка на Описание операции" translate="no">​</a></h3>
+<ul>
+<li class="">Фрагмент <code>!- текст -!</code> в описании подсвечивается как предупреждение в заказе-наряде и сводке</li>
+<li class=""><strong>Ctrl+W</strong> в поле описания оборачивает выделение (повторно — снимает обводку)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сводка-и-заказ-наряд">Сводка и заказ-наряд<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-2-beta#%D1%81%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0-%D0%B8-%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7-%D0%BD%D0%B0%D1%80%D1%8F%D0%B4" class="hash-link" aria-label="Прямая ссылка на Сводка и заказ-наряд" title="Прямая ссылка на Сводка и заказ-наряд" translate="no">​</a></h3>
+<ul>
+<li class="">В шапке показана <strong>наработка</strong></li>
+<li class="">В Excel-экспорте сводки та же наработка</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="мастер-операции">Мастер операции<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-2-beta#%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8" class="hash-link" aria-label="Прямая ссылка на Мастер операции" title="Прямая ссылка на Мастер операции" translate="no">​</a></h3>
+<ul>
+<li class="">Исполнителя можно набрать и отфильтровать в списке</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="вкладки">Вкладки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-2-beta#%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Вкладки" title="Прямая ссылка на Вкладки" translate="no">​</a></h3>
+<ul>
+<li class="">У активной вкладки снова видна акцентная полоска слева</li>
+<li class="">Заголовки неактивных вкладок тусклее</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="обслуживание">Обслуживание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-2-beta#%D0%BE%D0%B1%D1%81%D0%BB%D1%83%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="hash-link" aria-label="Прямая ссылка на Обслуживание" title="Прямая ссылка на Обслуживание" translate="no">​</a></h3>
+<ul>
+<li class="">Заказ-наряд можно создать или открыть, даже если полевого отчёта ещё нет</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="исправления">Исправления<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-2-beta#%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Исправления" title="Прямая ссылка на Исправления" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="операции">Операции<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-2-beta#%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8" class="hash-link" aria-label="Прямая ссылка на Операции" title="Прямая ссылка на Операции" translate="no">​</a></h3>
+<ul>
+<li class="">Серийный номер и тип компонента берутся из связанного материала, а не из устаревшей записи на операции</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="отправки">Отправки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-2-beta#%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Отправки" title="Прямая ссылка на Отправки" translate="no">​</a></h3>
+<ul>
+<li class="">После сохранения карточка берёт данные с сервера и не откатывает поля при обновлении списка</li>
+</ul>
+<hr>
+<p><em>DrillOps Desktop 0.5.2-beta · Contract v5 · Сентябрь 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.5.0-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-0-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-0-beta</guid>
+            <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Патч: даты без сдвига дня, ПД админам, тип операции не сбрасывается, Warn в «На обслуживании» только от ПД.]]></description>
+            <content:encoded><![CDATA[<p><strong>Патч: даты без сдвига дня, ПД админам, тип операции не сбрасывается, Warn в «На обслуживании» только от ПД.</strong></p>
+<!-- -->
+<blockquote>
+<p>⚠️ Обновляйте <strong>Desktop и API вместе</strong> до <code>0.5.0-beta</code>.<br>
+<strong>Contract v5</strong> — вход на старый сервер будет заблокирован. Сначала обновите API.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-что-нового">🚀 Что нового<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-0-beta#-%D1%87%D1%82%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE" class="hash-link" aria-label="Прямая ссылка на 🚀 Что нового" title="Прямая ссылка на 🚀 Что нового" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="полевые-данные">Полевые данные<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-0-beta#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5" class="hash-link" aria-label="Прямая ссылка на Полевые данные" title="Прямая ссылка на Полевые данные" translate="no">​</a></h3>
+<ul>
+<li class="">Админ может менять <strong>дату ПД</strong> и флажок <strong>«Завершён»</strong> (в т.ч. открыть документ снова)</li>
+<li class="">Остальные роли по-прежнему завершают ПД кнопкой «Завершить»</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="операции-в-наряде">Операции в наряде<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-0-beta#%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8-%D0%B2-%D0%BD%D0%B0%D1%80%D1%8F%D0%B4%D0%B5" class="hash-link" aria-label="Прямая ссылка на Операции в наряде" title="Прямая ссылка на Операции в наряде" translate="no">​</a></h3>
+<ul>
+<li class="">Тип операции при правке даты / исполнителя / причины <strong>не сбрасывается</strong></li>
+<li class="">В мастере тип не теряется при переключении шагов и календаре</li>
+<li class="">В таблице исполнитель, тип, компонент и причина выровнены <strong>по вертикали по центру</strong></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="главная">Главная<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-0-beta#%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F" class="hash-link" aria-label="Прямая ссылка на Главная" title="Прямая ссылка на Главная" translate="no">​</a></h3>
+<ul>
+<li class="">В колонке <strong>«На обслуживании»</strong> предупреждение только от <strong>инцидента в ПД</strong>, не от отклонения в ЗН</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="даты">Даты<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-0-beta#%D0%B4%D0%B0%D1%82%D1%8B" class="hash-link" aria-label="Прямая ссылка на Даты" title="Прямая ссылка на Даты" translate="no">​</a></h3>
+<ul>
+<li class="">Календарный день в ЗН, ПД и операциях совпадает с выбранным в пикере (UTC+5 без −1 дня)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="навигация">Навигация<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-0-beta#%D0%BD%D0%B0%D0%B2%D0%B8%D0%B3%D0%B0%D1%86%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Навигация" title="Прямая ссылка на Навигация" translate="no">​</a></h3>
+<ul>
+<li class="">«Открыть тип» открывает сам тип, а не вид</li>
+<li class="">«Открыть компонент» из поиска держит путь Вид → Тип → Вариант и список материалов варианта</li>
+</ul>
+<hr>
+<p><em>DrillOps Desktop 0.5.0-beta · Contract v5 · Август 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.5.1-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-1-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-1-beta</guid>
+            <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Патч Desktop: поля рейса в ПД, десятичный разделитель, откат правки.]]></description>
+            <content:encoded><![CDATA[<p><strong>Патч Desktop: поля рейса в ПД, десятичный разделитель, откат правки.</strong></p>
+<!-- -->
+<blockquote>
+<p>✅ Contract v5 — обновление API не требуется.
+Совместимо с API 0.5.0-beta</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-главное">🚀 Главное<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-1-beta#-%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B5" class="hash-link" aria-label="Прямая ссылка на 🚀 Главное" title="Прямая ссылка на 🚀 Главное" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="полевой-отчёт--рейс-desktop">Полевой отчёт / рейс (Desktop)<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-1-beta#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D0%BE%D0%B9-%D0%BE%D1%82%D1%87%D1%91%D1%82--%D1%80%D0%B5%D0%B9%D1%81-desktop" class="hash-link" aria-label="Прямая ссылка на Полевой отчёт / рейс (Desktop)" title="Прямая ссылка на Полевой отчёт / рейс (Desktop)" translate="no">​</a></h3>
+<ul>
+<li class="">Сохраняются и после сохранения отображаются: содержание песка, твёрдая фаза, pH, хлориды, температура, пространственная интенсивность, давление, циркуляционное время</li>
+<li class=""><strong>Изменить → Отменить</strong> больше не обнуляет эти поля</li>
+<li class="">При импорте рейса копируется вся матрица вибраций</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ввод-чисел-desktop">Ввод чисел (Desktop)<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-5-1-beta#%D0%B2%D0%B2%D0%BE%D0%B4-%D1%87%D0%B8%D1%81%D0%B5%D0%BB-desktop" class="hash-link" aria-label="Прямая ссылка на Ввод чисел (Desktop)" title="Прямая ссылка на Ввод чисел (Desktop)" translate="no">​</a></h3>
+<ul>
+<li class="">Точка и запятая равнозначны; при вводе подставляется разделитель текущей культуры (для ru — запятая)</li>
+</ul>
+<hr>
+<p><em>DrillOps 0.5.1-beta · Contract v5 · Август 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.4.0-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-4-0-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-4-0-beta</guid>
+            <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Патч: сводка по компоненту, операции по выбранному узлу, даты без сдвига дня.]]></description>
+            <content:encoded><![CDATA[<p><strong>Патч: сводка по компоненту, операции по выбранному узлу, даты без сдвига дня.</strong></p>
+<!-- -->
+<blockquote>
+<p>⚠️ Обновляйте <strong>Desktop и API вместе</strong> до <code>0.4.0-beta</code>.
+<strong>Contract v4</strong> — вход на старый сервер будет заблокирован. Сначала обновите API.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="что-нового">Что нового<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-4-0-beta#%D1%87%D1%82%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE" class="hash-link" aria-label="Прямая ссылка на Что нового" title="Прямая ссылка на Что нового" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сводка">Сводка<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-4-0-beta#%D1%81%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Сводка" title="Прямая ссылка на Сводка" translate="no">​</a></h3>
+<ul>
+<li class="">Для компонента (и вложенной сборки без своих нарядов) строится линия жизни в сборке-носителе: установка, извлечение, утилизация</li>
+<li class="">Отправки и полевые данные — только пока компонент был в этой сборке; у извлечённого нет «Готово» на этом ЗН</li>
+<li class="">Установка не тянет отправку/ПД того же наряда (прошлый рейс); берутся со следующего цикла</li>
+<li class="">Утилизация: «Утилизировано» вместо «Готово»</li>
+<li class="">Если компонент не извлекали — «Готово» на завершённом наряде как раньше</li>
+<li class="">Сводку компонента можно открыть со страниц материалов, сборок и наряда</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="мастер-операций">Мастер операций<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-4-0-beta#%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B9" class="hash-link" aria-label="Прямая ссылка на Мастер операций" title="Прямая ссылка на Мастер операций" translate="no">​</a></h3>
+<ul>
+<li class="">Выбор компонента для Repair, Maintenance, Waiting for parts (корень сборки тоже в списке)</li>
+<li class="">Extract / Scrap — по-прежнему только прямые компоненты слотов</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="даты">Даты<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-4-0-beta#%D0%B4%D0%B0%D1%82%D1%8B" class="hash-link" aria-label="Прямая ссылка на Даты" title="Прямая ссылка на Даты" translate="no">​</a></h3>
+<ul>
+<li class="">Дата операции — календарный день, без сдвига на −1 в часовых поясах вроде UTC+5</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="аналитика">Аналитика<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-4-0-beta#%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Аналитика" title="Прямая ссылка на Аналитика" translate="no">​</a></h3>
+<ul>
+<li class="">Ожидание ЗИП: от Waiting for parts до следующего Maintenance того же компонента</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="отмена-операций">Отмена операций<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-4-0-beta#%D0%BE%D1%82%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B9" class="hash-link" aria-label="Прямая ссылка на Отмена операций" title="Прямая ссылка на Отмена операций" translate="no">​</a></h3>
+<ul>
+<li class="">После отмены обновляется кэш нарядов (в т.ч. пустой дочерний ЗН после извлечения на ТО)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="развёртывание">Развёртывание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-4-0-beta#%D1%80%D0%B0%D0%B7%D0%B2%D1%91%D1%80%D1%82%D1%8B%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="hash-link" aria-label="Прямая ссылка на Развёртывание" title="Прямая ссылка на Развёртывание" translate="no">​</a></h2>
+<table><thead><tr><th>Компонент</th><th>Версия</th><th>Действие</th></tr></thead><tbody><tr><td>Desktop</td><td>0.4.0-beta</td><td>setup.exe после API</td></tr><tr><td>API</td><td>0.4.0-beta</td><td>сервер первым (8080 / 8081)</td></tr><tr><td>Contract</td><td>4</td><td>обязательно</td></tr></tbody></table>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.3.2-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-2-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-2-beta</guid>
+            <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Hot Fix: вкладка обновления, руководство, правка слотов шаблона, блокировка перемещения материалов.]]></description>
+            <content:encoded><![CDATA[<p>Hot Fix: вкладка обновления, руководство, правка слотов шаблона, блокировка перемещения материалов.</p>
+<!-- -->
+<blockquote>
+<p>✅ Contract v3 — обновление API не требуется.
+Совместимо с API 0.3.1-beta и новее.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-что-нового">🚀 Что нового<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-2-beta#-%D1%87%D1%82%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE" class="hash-link" aria-label="Прямая ссылка на 🚀 Что нового" title="Прямая ссылка на 🚀 Что нового" translate="no">​</a></h2>
+<p>Обновление — вкладка вместо баннера
+• Если есть новая версия, при каждом входе открывается вкладка «Обновление»
+• Патчноут берётся из GitHub Releases и показывается в теме приложения
+• Кнопка «Скачать» ставит обновление; «Сайт» открывает страницу релиза</p>
+<p>Шапка — руководство
+• Кнопка info справа от смены темы открывает руководство пользователя</p>
+<p>Шаблоны сборок — правка слотов
+• Выбранный в дереве слот можно править (тип и суффикс), не только корень шаблона</p>
+<p>Материалы — перемещение
+• «Переместить» нельзя, если элемент уже используется: компонент в сборке, у варианта есть установленные SN, на типе есть шаблон или слот</p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.3.0-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-0-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-0-beta</guid>
+            <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Сборки, полевые данные и синхронизация карточек при правках с сервера.]]></description>
+            <content:encoded><![CDATA[<p><strong>Сборки, полевые данные и синхронизация карточек при правках с сервера.</strong></p>
+<!-- -->
+<blockquote>
+<p>⚠️ <strong>Contract v3</strong> — перед установкой Desktop обновите <strong>API до <code>0.3.0-beta</code></strong>.<br>
+<!-- -->Desktop 0.3.0-beta <strong>не совместим</strong> с API 0.2.x.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="что-нового">Что нового<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-0-beta#%D1%87%D1%82%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE" class="hash-link" aria-label="Прямая ссылка на Что нового" title="Прямая ссылка на Что нового" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сборки--суффикс-слота">Сборки — суффикс слота<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-0-beta#%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B8--%D1%81%D1%83%D1%84%D1%84%D0%B8%D0%BA%D1%81-%D1%81%D0%BB%D0%BE%D1%82%D0%B0" class="hash-link" aria-label="Прямая ссылка на Сборки — суффикс слота" title="Прямая ссылка на Сборки — суффикс слота" translate="no">​</a></h3>
+<ul>
+<li class="">При добавлении слота в шаблон можно указать <strong>суффикс</strong> (например, Upper)</li>
+<li class="">Он дописывается к имени типа и варианта в дереве, карточке и при извлечении в наряде</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сборки--вложенные-шаблоны">Сборки — вложенные шаблоны<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-0-beta#%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B8--%D0%B2%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B" class="hash-link" aria-label="Прямая ссылка на Сборки — вложенные шаблоны" title="Прямая ссылка на Сборки — вложенные шаблоны" translate="no">​</a></h3>
+<ul>
+<li class="">Тип уже существующего шаблона снова доступен при вставке слота</li>
+<li class="">Раньше он пропадал из списка, если шаблон создали раньше слота</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="полевые-данные">Полевые данные<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-0-beta#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D0%B5-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5" class="hash-link" aria-label="Прямая ссылка на Полевые данные" title="Прямая ссылка на Полевые данные" translate="no">​</a></h3>
+<ul>
+<li class="">Удаление отчёта о рейсе — с подтверждением; отчёт уходит в корзину, вложения сохраняются</li>
+<li class="">В превью старой версии видны <strong>только отчёты, которые были на тот момент</strong> (пометки «добавлен позже» больше нет)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="карточки--чужие-правки">Карточки — чужие правки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-0-beta#%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B8--%D1%87%D1%83%D0%B6%D0%B8%D0%B5-%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Карточки — чужие правки" title="Прямая ссылка на Карточки — чужие правки" translate="no">​</a></h3>
+<ul>
+<li class="">Если запись изменили на сервере, пока вы её смотрите или редактируете, появляется баннер</li>
+<li class="">Можно <strong>принять обновление</strong> или <strong>оставить свои изменения</strong></li>
+<li class="">Работает в сборках, клиентах, локациях, отправках, нарядах и ПД</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="развёртывание">Развёртывание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-0-beta#%D1%80%D0%B0%D0%B7%D0%B2%D1%91%D1%80%D1%82%D1%8B%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="hash-link" aria-label="Прямая ссылка на Развёртывание" title="Прямая ссылка на Развёртывание" translate="no">​</a></h2>
+<table><thead><tr><th>Компонент</th><th>Версия</th><th>Действие</th></tr></thead><tbody><tr><td><strong>API</strong></td><td><code>0.3.0-beta</code></td><td>Сначала обновить сервер</td></tr><tr><td><strong>Desktop</strong></td><td><code>0.3.0-beta</code></td><td>Затем установить setup.exe</td></tr><tr><td><strong>Contract</strong></td><td><strong>3</strong></td><td>API и Desktop должны быть v3</td></tr></tbody></table>
+<hr>
+<p><em>DrillOps 0.3.0-beta · Contract v3 · Август 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.3.1-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-1-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-1-beta</guid>
+            <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[⚠️ Contract v3 — обновляйте Desktop и API вместе до 0.3.1-beta.]]></description>
+            <content:encoded><![CDATA[<blockquote>
+<p>⚠️ Contract v3 — обновляйте Desktop и API вместе до 0.3.1-beta.</p>
+</blockquote>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-что-нового">🚀 Что нового<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-3-1-beta#-%D1%87%D1%82%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE" class="hash-link" aria-label="Прямая ссылка на 🚀 Что нового" title="Прямая ссылка на 🚀 Что нового" translate="no">​</a></h2>
+<p>Компоненты — установлено в сборке
+• Кнопка «Открыть сборку» объединена с текстом сборки: на кнопке — название сборки, по ширине текста
+• Головной материал сборки тоже считается установленным — сборку можно открыть сразу из карточки компонента</p>
+<p>Шаблоны — добавление слотов
+• При добавлении слотов подряд не сбрасывается выбранный тип и не сворачивается группа в дереве</p>
+<p>Комплектность сборок
+• Пустые слоты под вложенный шаблон учитываются как нескомплектованные слоты этого шаблона (рекурсивно)</p>
+<p>Наряды и отклонения
+• Предупреждение об отклонении учитывает вложенные сборки и поднимается к родительским
+• В интерфейсе понятнее видно, что в последнем заказ-наряде есть отклонение</p>
+<p>Материалы — перемещение
+• Действие «Переместить» с выбором цели (вариант / тип / вид)</p>
+<p>Вход — обязательное обновление
+• Если сервер новее клиента, предлагается скачать и установить обновление (или открыть страницу релизов)</p>
+<p>Полевые данные — импорт рейсов
+• Импорт только из сохранённых рейсов; уточнены сообщения, если импортировать нечего</p>
+<p>Прочее
+• Мелкий polish: Main, отправки, мастер операций, nullable-поля в формах</p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.2.1-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-1-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-1-beta</guid>
+            <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Hot Fix: иконка, сборки и отклик на изменения материалов, блокировка автообновления.]]></description>
+            <content:encoded><![CDATA[<p><strong>Hot Fix:</strong> иконка, сборки и отклик на изменения материалов, блокировка автообновления.</p>
+<!-- -->
+<blockquote>
+<p>✅ Contract v2 — обновление API не требуется.
+Совместимо с API 0.2.0-beta и новее.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-что-нового">🚀 Что нового<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-1-beta#-%D1%87%D1%82%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE" class="hash-link" aria-label="Прямая ссылка на 🚀 Что нового" title="Прямая ссылка на 🚀 Что нового" translate="no">​</a></h2>
+<p>Иконка приложения
+• Обновлена иконка DrillOps Desktop</p>
+<p>Сборки — подписи вариантов компонентов
+• При выборе материала в пустой слот сборки отображаются наименования вариантов компонентов
+• Проще понять, какой компонент устанавливаете, без открытия карточки материала</p>
+<p>Сборки — мгновенная реакция на материалы
+• Раздел «Сборки» сразу обновляется при изменении материалов (статус, перемещение, правки)
+• Не нужно вручную перезагружать страницу или переключать вкладку</p>
+<p>Автообновление — блокировка
+• Проверка SHA больше не не блокирует запуск установщика</p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.2.0-beta]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta</guid>
+            <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Большое обновление рабочего процесса, отчётности, документации и автообновления.]]></description>
+            <content:encoded><![CDATA[<p><strong>Большое обновление рабочего процесса, отчётности, документации и автообновления.</strong></p>
+<!-- -->
+<blockquote>
+<p>⚠️ <strong>Contract v2</strong> — перед установкой Desktop обновите <strong>API до <code>0.2.0-beta</code></strong>.<br>
+<!-- -->Desktop 0.2.0-beta <strong>не совместим</strong> с API 0.1.x.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-главное-в-релизе">🚀 Главное в релизе<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#-%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B5-%D0%B2-%D1%80%D0%B5%D0%BB%D0%B8%D0%B7%D0%B5" class="hash-link" aria-label="Прямая ссылка на 🚀 Главное в релизе" title="Прямая ссылка на 🚀 Главное в релизе" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="автообновление-desktop">Автообновление Desktop<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#%D0%B0%D0%B2%D1%82%D0%BE%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-desktop" class="hash-link" aria-label="Прямая ссылка на Автообновление Desktop" title="Прямая ссылка на Автообновление Desktop" translate="no">​</a></h3>
+<ul>
+<li class="">Клиент при входе проверяет центральный каталог релизов и предлагает обновление</li>
+<li class="">Проверка <strong>contract version</strong> — несовместимый setup не предложат</li>
+<li class="">Установка с выбором: <strong>только текущий пользователь</strong> или <strong>все пользователи</strong> ПК</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="сводка-summary">Сводка (Summary)<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#%D1%81%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0-summary" class="hash-link" aria-label="Прямая ссылка на Сводка (Summary)" title="Прямая ссылка на Сводка (Summary)" translate="no">​</a></h3>
+<ul>
+<li class="">Новая вкладка <strong>Сводка</strong> — единая лента документов и событий по датам</li>
+<li class="">Группировка по типам: наряды, отправки, ТО, история полей и др.</li>
+<li class="">Поиск, фильтры, разворот групп</li>
+<li class=""><strong>Экспорт в Excel</strong> с детализацией по строкам</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="документация">Документация<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Документация" title="Прямая ссылка на Документация" translate="no">​</a></h3>
+<ul>
+<li class="">Полноценный <strong>файловый менеджер</strong> документов (Desktop + Web Admin)</li>
+<li class="">Папки, загрузка, скачивание, переименование, удаление</li>
+<li class=""><strong>Глобальный поиск</strong> по имени файла по всем папкам</li>
+<li class="">Замена файла при загрузке с подтверждением</li>
+<li class="">Права доступа через RBAC (<code>Documentation</code>: None / Read / Write)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="аналитика">Аналитика<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Аналитика" title="Прямая ссылка на Аналитика" translate="no">​</a></h3>
+<ul>
+<li class="">Новая вкладка <strong>Аналитика</strong> — метрики по парку оборудования</li>
+<li class="">Сводка по статусам (готов / в поле / на ТО)</li>
+<li class="">Матрица статус × шаблон сборки, динамика за период</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-desktop--рабочий-процесс">🖥 Desktop — рабочий процесс<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#-desktop--%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81" class="hash-link" aria-label="Прямая ссылка на 🖥 Desktop — рабочий процесс" title="Прямая ссылка на 🖥 Desktop — рабочий процесс" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="главная-и-сборки">Главная и сборки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D0%B8-%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Главная и сборки" title="Прямая ссылка на Главная и сборки" translate="no">​</a></h3>
+<ul>
+<li class="">Переработан <strong>Main Workflow</strong> — колонки, статусы, навигация</li>
+<li class=""><strong>Рекурсивный расчёт комплектности</strong> сборок (вложенные сборки учитываются корректно)</li>
+<li class="">Фильтры по <strong>шаблонам сборок</strong> вместо типов материалов</li>
+<li class="">Богаче контекстные меню: открыть сборку, компонент, тип, документы</li>
+<li class="">«Где установлен» материал в дереве сборок</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="наряды-work-orders">Наряды (Work Orders)<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#%D0%BD%D0%B0%D1%80%D1%8F%D0%B4%D1%8B-work-orders" class="hash-link" aria-label="Прямая ссылка на Наряды (Work Orders)" title="Прямая ссылка на Наряды (Work Orders)" translate="no">​</a></h3>
+<ul>
+<li class="">Улучшенный мастер <strong>операций</strong> — prefill, извлечение/вставка материалов</li>
+<li class=""><strong>Multi-acting</strong> — несколько исполнителей на одной операции</li>
+<li class="">Навигация prev/next по документам прямо из наряда</li>
+<li class="">Фильтр по серийному номеру</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="отправки">Отправки<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8" class="hash-link" aria-label="Прямая ссылка на Отправки" title="Прямая ссылка на Отправки" translate="no">​</a></h3>
+<ul>
+<li class="">Клиент / кластер / месторождение в карточке отправки</li>
+<li class="">Улучшенная навигация и связи с другими разделами</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="история-полей-field-history">История полей (Field History)<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B9-field-history" class="hash-link" aria-label="Прямая ссылка на История полей (Field History)" title="Прямая ссылка на История полей (Field History)" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Версии отчётов</strong> — снимки, diff между версиями</li>
+<li class="">Улучшенные формы отчётов и матрицы</li>
+<li class="">Навигация между документами, фильтры</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="то-maintenance">ТО (Maintenance)<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#%D1%82%D0%BE-maintenance" class="hash-link" aria-label="Прямая ссылка на ТО (Maintenance)" title="Прямая ссылка на ТО (Maintenance)" translate="no">​</a></h3>
+<ul>
+<li class="">Фильтры и <strong>бейджи инцидентов</strong></li>
+<li class="">Возврат сборки в ТО с привязкой к локации «Цех»</li>
+<li class="">Уникальные частичные номера</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="текстовые-шаблоны">Текстовые шаблоны<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B" class="hash-link" aria-label="Прямая ссылка на Текстовые шаблоны" title="Прямая ссылка на Текстовые шаблоны" translate="no">​</a></h3>
+<ul>
+<li class="">Шаблоны перенесены <strong>на сервер</strong> (единый источник для всех клиентов)</li>
+<li class="">Импорт/экспорт, редактирование в Desktop</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="прочее-ux">Прочее UX<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5-ux" class="hash-link" aria-label="Прямая ссылка на Прочее UX" title="Прямая ссылка на Прочее UX" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>История вкладок</strong> TabShell — назад / вперёд как в браузере</li>
+<li class="">Сброс пароля пользователя (диалог)</li>
+<li class="">Мелкий polish: локализация, выравнивание колонок, контекстные меню</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-исправления-и-техническое">🐛 Исправления и техническое<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#-%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B8-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5" class="hash-link" aria-label="Прямая ссылка на 🐛 Исправления и техническое" title="Прямая ссылка на 🐛 Исправления и техническое" translate="no">​</a></h2>
+<ul>
+<li class="">Корректный расчёт комплектности вложенных сборок</li>
+<li class="">Синхронизация <code>HasTrouble</code> у материалов</li>
+<li class="">Убран устаревший статус <code>Stored</code></li>
+<li class="">Исправления extract/insert в операциях</li>
+<li class="">Стабильность кэша и SignalR-обновлений</li>
+<li class="">Множество UX-фиксов по shipments, WO, FH, materials</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-известные-ограничения-beta">🔜 Известные ограничения (beta)<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-2-0-beta#-%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5-%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-beta" class="hash-link" aria-label="Прямая ссылка на 🔜 Известные ограничения (beta)" title="Прямая ссылка на 🔜 Известные ограничения (beta)" translate="no">​</a></h2>
+<ul>
+<li class="">HTTPS для API — через reverse proxy (Nginx / Traefik)</li>
+<li class="">AI integration — только read, без записи</li>
+<li class="">Автообновление касается только Desktop — API обновляется отдельно (Docker)</li>
+<li class="">При смене contract version сначала обновите API, затем Desktop</li>
+</ul>
+<hr>
+<p><em>DrillOps 0.2.0-beta · Contract v2 · Август 2026</em></p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+        <item>
+            <title><![CDATA[0.1.1-alpha]]></title>
+            <link>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-1-1-alpha</link>
+            <guid>https://vanilla76e2.github.io/DrillOps.Manual/blog/0-1-1-alpha</guid>
+            <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Дата: июнь 2026]]></description>
+            <content:encoded><![CDATA[<p>Дата: июнь 2026
+Статус: alpha — для пилотного внедрения и тестирования</p>
+<!-- -->
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="кратко">Кратко<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-1-1-alpha#%D0%BA%D1%80%D0%B0%D1%82%D0%BA%D0%BE" class="hash-link" aria-label="Прямая ссылка на Кратко" title="Прямая ссылка на Кратко" translate="no">​</a></h2>
+<p>Первый публичный alpha-релиз DrillOps: учёт бурового оборудования с настольным клиентом для операторов, сервером API + Web Admin и PostgreSQL.</p>
+<p>Готовый Docker-образ API опубликован на Docker Hub: <code>vanilla76e2/drillops-api:0.1.0-alpha</code></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="развёртывание">Развёртывание<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-1-1-alpha#%D1%80%D0%B0%D0%B7%D0%B2%D1%91%D1%80%D1%82%D1%8B%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" class="hash-link" aria-label="Прямая ссылка на Развёртывание" title="Прямая ссылка на Развёртывание" translate="no">​</a></h2>
+<p>Docker Hub: <code>vanilla76e2/drillops-api:0.1.0-alpha</code>
+Desktop: <code>DrillOps.Desktop-Setup-0.1.0-alpha.exe / MSI (Windows x64)</code>
+API (Windows): <code>DrillOps.API-Setup-0.1.0-alpha.exe / MSI</code>
+Документация: <code>README в репозитории, каталог packaging/</code></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="drillopsdesktop-операторы">DrillOps.Desktop (операторы)<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-1-1-alpha#drillopsdesktop-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B" class="hash-link" aria-label="Прямая ссылка на DrillOps.Desktop (операторы)" title="Прямая ссылка на DrillOps.Desktop (операторы)" translate="no">​</a></h2>
+<ul>
+<li class="">Главный экран: колонки «Готово / В поле / Техобслуживание», фильтры, контекстные действия</li>
+<li class="">Компоненты: справочник Вид → Тип → Вариант → Компонент, наработка, свойства (матрица L4–L7)</li>
+<li class="">Сборки: шаблоны и сборки, дерево компонентов, слоты, назначение и извлечение материалов</li>
+<li class="">Отправки, клиенты, локации</li>
+<li class="">Техобслуживание и наряды (Work Order) с операциями</li>
+<li class="">Полевая история: отчёты по рейсам, матрицы вибраций, вложения</li>
+<li class="">Вкладки с откреплением, локализация RU/EN</li>
+<li class="">Вход: сохранение URL API, проверка совместимости версии клиента и API</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="drillopsapi--web-admin">DrillOps.API + Web Admin<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-1-1-alpha#drillopsapi--web-admin" class="hash-link" aria-label="Прямая ссылка на DrillOps.API + Web Admin" title="Прямая ссылка на DrillOps.API + Web Admin" translate="no">​</a></h2>
+<ul>
+<li class="">REST API, SignalR, JWT-аутентификация</li>
+<li class="">RBAC: роли и матрица прав по модулям</li>
+<li class="">Web Admin (isSA): пользователи, роли, мониторинг</li>
+<li class="">Версионирование API и проверка совместимости с Desktop</li>
+<li class="">Хранение вложений на диске</li>
+<li class="">Миграции БД при старте</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="инфраструктура-и-упаковка">Инфраструктура и упаковка<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-1-1-alpha#%D0%B8%D0%BD%D1%84%D1%80%D0%B0%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%B8-%D1%83%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BA%D0%B0" class="hash-link" aria-label="Прямая ссылка на Инфраструктура и упаковка" title="Прямая ссылка на Инфраструктура и упаковка" translate="no">​</a></h2>
+<ul>
+<li class="">Docker Compose: API + PostgreSQL; вариант с внешней БД</li>
+<li class="">Скрипты сборки: packaging/Build-All.cmd, Inno Setup, WiX MSI</li>
+<li class="">Примеры compose для production</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="требования">Требования<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-1-1-alpha#%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" class="hash-link" aria-label="Прямая ссылка на Требования" title="Прямая ссылка на Требования" translate="no">​</a></h2>
+<ul>
+<li class="">Сервер (Docker): Docker, Docker Compose, PostgreSQL 14+ (в compose или внешняя)</li>
+<li class="">Сервер (Windows): Windows Server / Win 10+, PostgreSQL 14+</li>
+<li class="">Desktop: Windows 10/11 x64</li>
+<li class="">Браузер (Admin): современный Chromium / Edge / Firefox</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="известные-ограничения-alpha">Известные ограничения alpha<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-1-1-alpha#%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5-%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-alpha" class="hash-link" aria-label="Прямая ссылка на Известные ограничения alpha" title="Прямая ссылка на Известные ограничения alpha" translate="no">​</a></h2>
+<ul>
+<li class="">Версии Desktop и API должны совпадать по контракту (0.1.0-alpha)</li>
+<li class="">Production: обязательно сменить Jwt__Key и пароли БД; рекомендуется HTTPS</li>
+<li class="">Возможны ошибки UI и неполное покрытие сценариев — приветствуется обратная связь от тестировщиков</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="установка-быстрый-старт">Установка (быстрый старт)<a href="https://vanilla76e2.github.io/DrillOps.Manual/blog/0-1-1-alpha#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9-%D1%81%D1%82%D0%B0%D1%80%D1%82" class="hash-link" aria-label="Прямая ссылка на Установка (быстрый старт)" title="Прямая ссылка на Установка (быстрый старт)" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">docker pull vanilla76e2/drillops-api:0.1.0-alpha</span><br></div></code></pre></div></div>
+<p>Отредактируйте <code>docker-compose.yml</code> (образ <code>vanilla76e2/drillops-api:0.1.0-alpha</code>, секреты JWT и БД). Примеры: <code>packaging/docker/</code></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">docker compose up -d</span><br></div></code></pre></div></div>
+<p><strong>Desktop:</strong> URL <code>http://&lt;сервер&gt;:8080/</code>, вход под учётной записью из Web Admin.</p>]]></content:encoded>
+            <category>Релиз</category>
+        </item>
+    </channel>
+</rss>
